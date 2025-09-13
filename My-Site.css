@@ -28,7 +28,7 @@ body{
 
 .menu{
     min-width:140px;
-    font-size:0.9em;
+    font-size:1em;
     text-align: center;
     line-height: 55px;
 }
@@ -109,11 +109,16 @@ margin-left:40px;
 
 .c{
     height: 77px;
+    width: 860px;
+     margin: 30px auto; /* Adds spacing and centers the element */
+    position: relative;
     color: white;
     text-align: center;
     border: 2px solid white; /* See border */
-    opacity: 0.8;
     margin-top:10px;
+    flex-shrink: 1;
+    flex-wrap: 1;
+    flex-grow: 1;
 }
 
 .small_img{
