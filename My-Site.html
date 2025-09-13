@@ -6,42 +6,154 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width"/>
 <link rel="stylesheet" type="text/css" href="My-Site.css">
+<script src="javadoc.js"></script>
+
 </head>
 <body>
 
 <div class="main-container">
     <div class="flex-container">
-    <div class="menu item 1">Home</div>
     <div class="menu item 2">About</div>
     <div class="menu item 3">Contact Us</div>
+        <div class="menu item 1"> Home</div>
+    <div class="menu item 4">News</div>
+    <div class="menu item 5">Sign Up</div>
 </div>
 </div>
     <div class="image-container">
-    <h1>Welcome to My Site</h1>
         <img id="banner-image" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+    <div class="banner-title"><h1>Welcome!</h1></div>
+</div>
+
+   <div class="banner-subtitle">Scroll down for more</div>
+<form class="form">
+    <div id="register">
+        <span> Register now!</span>
+        <span>Already have an account?</span></div>
     </div>
 
+            First name: <input type="text" name="FirstName"><br>
+            Last name: <input type="text" name="LastName"><br>
+            Date of Birth: <input type="date" name="Date of Birth"><br>
+            Gender: <input name="Gender" type="radio">Male<input name="Gender" type="radio">Female<br>
+            Country: <select type ="radio" name="Country">
+            <option value="Select">---</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="Canada">Canada</option>
+                <option value="Australia">Australia</option><br>
+            </select><br>
+            Email: <input type="email" name="Email"><br>
+            Mobile number: <input type="tel" name="MobileNumber" pattern="[0-20]{20}"><br>
+            Password: <input type="password" name="Password"><br>
+            Confirm Password: <input type="password" name="ConfirmPassword"><br>
+
+            <input type="checkbox" name="Terms">I agree to the Terms and Conditions<br>
+            <input type="checkbox" name="Terms">I agree to receive product updates and notifications<br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+</form>
+
+<div class="divider" aria-hidden="true"></div>
     <div class="container">
-        <div class="a">Satelite
-            <img class ="small_img"src=" https://www.techtarget.com/rms/onlineImages/international_space_station.jpg">
+        <div class="a"><p id="p1">Satelite</p>
+            <img class ="small_img"src="https://www.techtarget.com/rms/onlineImages/international_space_station.jpg">
         </img>
 
         </div>
-            <div class="blockb-title">
-        <div class="b">Space X. Rocket launch
+            <div class="container">
+        <div class="b"><p id="p1">Space X. Rocket launch</p>
             <img class ="small_img" src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
             </div>
             </div>
 </div>
-<div class="container2">
-<div class="c">  <p class="space-facts">Space is the boundless,
+
+
+<div class="c">
+    <p class="space-facts">Space is the boundless,
             three-dimensional extent
             where objects and events occur,
             defined by position and direction.
             In a cosmological sense,
             it's the vast, mostly empty expanse of the universe containing matter, energy, and radiation,
-            all expanding from the initial Big Bang.</p></div>
+            all expanding from the initial Big Bang.
+        </p></div>
 </div>
+
+<div class="divider" aria-hidden="true"></div>
+    <h1>What's new? See our latest videos</h1>
+<div class="video-scroll-wrapper">
+    <button class="scroll-btn left-btn" aria-label="Scroll Left">&lt;</button>
+    <div class="video-list-container">
+        <div class="video-item">
+            <iframe
+                src="https://www.youtube.com/embed/ATgwz_hS3Qg"
+                title="YouTube video player 1"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="video-item">
+            <iframe
+                src="https://www.youtube.com/embed/pSHVbLPWA28"
+                title="YouTube video player 2"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="video-item">
+            <iframe
+                src="https://www.youtube.com/embed/1MkcWK2PnsU"
+                title="YouTube video player 3"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="video-item">
+            <iframe
+                src="https://www.youtube.com/embed/0qo78R_yYFA"
+                title="YouTube video player 4"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="video-item">
+            <iframe
+                src="https://www.youtube.com/embed/2aCOyOvOw5c"
+                title="YouTube video player 5"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="video-item">
+            <iframe
+        src="https://www.youtube.com/embed/-StZggK4hhA"
+                title="YouTube video player 6"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="video-item">
+            <iframe
+                src="https://www.youtube.com/embed/sq3nBYQkGek"
+                title="YouTube video player 7"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+    <button class="scroll-btn right-btn" aria-label="Scroll Right">&gt;</button>
+</div>
+
+<div class="divider" aria-hidden="true"></div>
 
 </body>
 </html>
