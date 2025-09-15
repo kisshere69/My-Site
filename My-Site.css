@@ -9,28 +9,81 @@ body{
 
 .main-container{
     display: flex;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    background-color: none;
+}
+
+a:active {
+    color: white;
+    background-color: none;
+
+}
+a:visited {
+    color: white;
+    background-color: none;
 
 }
 
-.flex-container{
+.flex-container {
     width: 100%;
-    gap:20px;
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-shrink: 1;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; /* разделяет лого, центр и справа */
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     border-bottom: 2px solid rgb(108, 107, 107);
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.menu-center {
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+    margin-left: 100px;
+}
+
+/* Sign Up справа */
+.menu-right {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 35px;
+}
+
+/* Ссылки */
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    color: lightskyblue;
 }
 
 
 .menu{
-    min-width:140px;
+    min-width:120px;
+    line-height: 70px;
     font-size:1em;
     text-align: center;
-    line-height: 55px;
 }
 
 .banner-title{
@@ -43,15 +96,17 @@ body{
 .banner-subtitle{
     position: absolute;
     left:45%;
-    top:90%;
+    top:80%;
     text-align: center;
         text-shadow: 5px 5px 10px rgba(0,0,0,0.8);
-
 }
 
 #register{
     margin-top: 20px;
     margin-bottom: 20px;
+    font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .image-container{
@@ -64,7 +119,7 @@ body{
 
 #banner-image{
     width: 100%;
-    height: 80vh;
+    height: 86vh;
     object-fit: cover;
 }
 
@@ -86,10 +141,9 @@ body{
     flex-shrink: 1;
     text-align: center;
     gap:10%;
-
 }
 
-.a, .b{
+.a{
     color: white;
     text-align: center;
     margin-left: 30px;
@@ -98,6 +152,18 @@ body{
 #p1{
 margin-bottom: 20px;
 margin-left:40px;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.section-title {
+    text-align: center;
+    margin: 40px 0 20px 0; /* сверху и снизу отступ */
+    color: white;
+}
+
+.section-title h2 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
 
 .divider {
@@ -108,12 +174,14 @@ margin-left:40px;
 }
 
 .c{
-    height: 77px;
+    height: 100px;
     width: 860px;
      margin: 30px auto; /* Adds spacing and centers the element */
     position: relative;
     color: white;
     text-align: center;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
     border: 2px solid white; /* See border */
     margin-top:10px;
     flex-shrink: 1;
@@ -176,9 +244,64 @@ margin-left:40px;
     margin-left: 10px;
 }
 
-h1 {
+#h1 {
     text-align: center; /* Centers the text horizontally */
     margin: 20px auto; /* Adds spacing and centers the element */
     font-size: 2em; /* Adjust font size as needed */
     color: white; /* Optional: Ensure it matches your theme */
+}
+
+#have-account{
+        color: lightblue; /* Optional: Ensure it matches your theme */
+}
+
+.contact-section {
+   background: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url('https://media.istockphoto.com/id/1388642146/photo/call-center-workers.jpg?s=612x612&w=0&k=20&c=OQ-BhHBcXxYxK2zz4JUQXR6SJ1NucnaVjHWu8ylksNI=');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.contact-form button {
+    background-color: orange;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: darkorange;
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 14px;
 }

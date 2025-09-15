@@ -13,13 +13,26 @@
 
 <div class="main-container">
     <div class="flex-container">
-    <div class="menu item 2">About</div>
-    <div class="menu item 3">Contact Us</div>
-        <div class="menu item 1"> Home</div>
-    <div class="menu item 4">News</div>
-    <div class="menu item 5">Sign Up</div>
+        <!-- Лого слева -->
+        <div class="logo">
+            <a href="#"><img src="https://www.svgrepo.com/show/440522/space-rocket.svg" alt="Logo"/></a>
+        </div>
+
+        <!-- Меню по центру -->
+        <div class="menu-center">
+            <div class="menu item 2"><a href="#p1-title">About</a></div>
+            <div class="menu item 3"><a href="#contact">Contact Us</a></div>
+            <div class="menu item 4"><a href="#h1">News</a></div>
+        </div>
+
+        <!-- Sign Up справа -->
+        <div class="menu-right">
+            <div class="menu item 5"><a href="#register">Sign Up / Sign In</a></div>
+        </div>
+    </div>
 </div>
-</div>
+
+
     <div class="image-container">
         <img id="banner-image" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
     <div class="banner-title"><h1>Welcome!</h1></div>
@@ -28,8 +41,8 @@
    <div class="banner-subtitle">Scroll down for more</div>
 <form class="form">
     <div id="register">
-        <span> Register now!</span>
-        <span>Already have an account?</span></div>
+        <span>Sign Up /</span>
+        <span"><a href="https://www.google.com" id="have-account">Sign In</a></span>
     </div>
 
             First name: <input type="text" name="FirstName"><br>
@@ -56,6 +69,11 @@
 </form>
 
 <div class="divider" aria-hidden="true"></div>
+
+<div id="p1-title" class="section-title">
+    <h2>About</h2>
+</div>
+
     <div class="container">
         <div class="a"><p id="p1">Satelite</p>
             <img class ="small_img"src="https://www.techtarget.com/rms/onlineImages/international_space_station.jpg">
@@ -63,7 +81,7 @@
 
         </div>
             <div class="container">
-        <div class="b"><p id="p1">Space X. Rocket launch</p>
+        <div class="a"><p id="p1">Space X. Rocket launch</p>
             <img class ="small_img" src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
             </div>
             </div>
@@ -82,7 +100,7 @@
 </div>
 
 <div class="divider" aria-hidden="true"></div>
-    <h1>What's new? See our latest videos</h1>
+    <h1 id="h1">What's new? See our latest videos</h1>
 <div class="video-scroll-wrapper">
     <button class="scroll-btn left-btn" aria-label="Scroll Left">&lt;</button>
     <div class="video-list-container">
@@ -154,6 +172,33 @@
 </div>
 
 <div class="divider" aria-hidden="true"></div>
+
+
+<div id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Have questions? Reach out to us using the form below or via email.</p>
+
+    <form class="contact-form">
+        <label for="name">First Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="last name">Last Name</label>
+        <input type="text" id="name" name="last name" placeholder="Enter your last name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+
+    <div class="contact-info">
+        <p>Email: <a href="mailto:support@example.com">support@example.com</a></p>
+        <p>Phone: +123 456 7890</p>
+    </div>
+</div>
 
 </body>
 </html>
