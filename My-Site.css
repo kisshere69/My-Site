@@ -1,35 +1,77 @@
-html {
+html, :root {
     scroll-behavior: smooth;
+    --bg-color: #121212; /* Default to dark theme */
+    --text-color: #e0e0e0;
+    --header-bg: #1e1e1e;
+    --card-bg: #2a2a2a;
+    --shadow-color: rgba(255,255,255,0.1);
+    --divider-color: #444;
+    --button-bg: #333;
+    --button-text: #e0e0e0;
+}
+
+#theme-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+}
+
+/* Light Theme */
+html:not(.dark-theme) {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --header-bg: #fff;
+    --card-bg: #fff;
+    --shadow-color: rgba(0,0,0,0.1);
+    --divider-color: #ddd;
+    --button-bg: #f0f0f0;
+    --button-text: #222;
+}
+
+/* Icon visibility rules */
+.sun-icon,
+.dark-theme .moon-icon {
+    display: block;
+    margin-right: 20px;
+}
+
+.moon-icon,
+.dark-theme .sun-icon {
+    display: none;
+        margin-right: 20px;
+
+}
+
+#theme-toggle-btn svg {
+    transition: color 0.3s ease-in-out;
 }
 
 body{
-    background-color: black;
-    color:white;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .main-container{
     display: flex;
 }
 
-a:link {
-    color: white;
+a {
+    color: var(--text-color);
     text-decoration: none;
 }
 
-a:hover {
-    color: white;
-    background-color: none;
+.menu a:hover {
+    color: lightskyblue;
 }
 
-a:active {
-    color: white;
-    background-color: none;
-
-}
-a:visited {
-    color: white;
-    background-color: none;
-
+#have-account{
+    color: lightblue;
 }
 
 .flex-container {
@@ -39,12 +81,12 @@ a:visited {
     justify-content: space-between; /* разделяет лого, центр и справа */
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    border-bottom: 2px solid rgb(108, 107, 107);
+    border-bottom: 2px solid var(--divider-color);
     z-index: 9999;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color: var(--header-bg);
     padding: 0 20px;
 }
 
@@ -63,6 +105,8 @@ a:visited {
 /* Sign Up справа */
 .menu-right {
     display: flex;
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0; /* Remove default padding */
     justify-content: flex-end;
     margin-right: 35px;
 }
@@ -70,12 +114,13 @@ a:visited {
 /* Ссылки */
 .menu a {
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     font-size: 18px;
 }
 
-.menu a:hover {
-    color: lightskyblue;
+.theme-switcher {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0; /* Remove default padding */
 }
 
 
@@ -91,12 +136,14 @@ a:visited {
     position: absolute;
     left: 36%;
     font-size: 3em;
+    color: white; /* Keep banner title color static */
     text-shadow: 5px 5px 8px rgba(0,0,0,0.8);
 }
 .banner-subtitle{
     position: absolute;
     left:45%;
     top:80%;
+    color: white; /* Keep banner subtitle color static */
     text-align: center;
         text-shadow: 5px 5px 10px rgba(0,0,0,0.8);
 }
@@ -106,13 +153,12 @@ a:visited {
     margin-bottom: 20px;
     font-size: 30px;
         font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .image-container{
     position: relative;
     text-align: center;
-    border-bottom: 4px solid #444; /* divider between image and bottom block */
+    border-bottom: 4px solid var(--divider-color); /* divider between image and bottom block */
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -144,7 +190,7 @@ a:visited {
 }
 
 .a{
-    color: white;
+    color: var(--text-color);
     text-align: center;
     margin-left: 30px;
 }
@@ -158,17 +204,17 @@ font-family:Arial, Helvetica, sans-serif;
 .section-title {
     text-align: center;
     margin: 40px 0 20px 0; /* сверху и снизу отступ */
-    color: white;
 }
 
 .section-title h2 {
-    font-size: 2.5em;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    font-size: 2em; /* Match the font size of h1 */
+    color: var(--text-color);
+    margin: 20px auto; /* Match the margin of h1 */
 }
 
 .divider {
     height: 4px;
-    background: #444;
+    background: var(--divider-color);
     width: 100%;
     margin: 20px 0;
 }
@@ -178,11 +224,11 @@ font-family:Arial, Helvetica, sans-serif;
     width: 860px;
      margin: 30px auto; /* Adds spacing and centers the element */
     position: relative;
-    color: white;
+    color: var(--text-color);
     text-align: center;
     font-size: 1.2em;
     font-family: Arial, Helvetica, sans-serif;
-    border: 2px solid white; /* See border */
+    border: 2px solid var(--text-color); /* See border */
     margin-top:10px;
     flex-shrink: 1;
     flex-wrap: 1;
@@ -248,11 +294,7 @@ font-family:Arial, Helvetica, sans-serif;
     text-align: center; /* Centers the text horizontally */
     margin: 20px auto; /* Adds spacing and centers the element */
     font-size: 2em; /* Adjust font size as needed */
-    color: white; /* Optional: Ensure it matches your theme */
-}
-
-#have-account{
-        color: lightblue; /* Optional: Ensure it matches your theme */
+    color: var(--text-color); /* Optional: Ensure it matches your theme */
 }
 
 .contact-section {
